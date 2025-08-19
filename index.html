@@ -3,31 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Bank App</title>
   </head>
-  <h3>Welcome to your bank</h3>
-  <div class="bank-balance">
-    <!---The button that will show the modal-->
-    <button id="showBalanceBtn">Show balance</button>
-  </div>
-
-  <!-- Modal for showing balance -->
-  <div id="balanceModal" class="modal">
-    <div class="modal-content">
-      <h2>Your Account Balance</h2>
-      <div class="balance-amount" id="balanceAmount">1000kr</div>
-      <p>Thank you for banking with us!</p>
-      <!-- Close button to hide the modal -->
-      <button class="close-btn" id="closeModalBtn">Close</button>
-    </div>
-  </div>
-
   <body>
+    <h3>Welcome to your bank</h3>
+    <div class="bank-balance">
+      <!---The button that will show the modal-->
+      <button id="showBalanceBtn">Show balance</button>
+    </div>
+
+    <!-- Modal for showing balance -->
+    <div id="balanceModal" class="modal">
+      <div class="modal-content">
+        <h2>Your Account Balance</h2>
+        <div class="balance-amount" id="balanceAmount">1000kr</div>
+        <p>Thank you for banking with us!</p>
+        <!-- Close button to hide the modal -->
+        <button class="close-btn" id="closeModalBtn">Close</button>
+      </div>
+    </div>
+
     <div class="Login">
       <input class="username" type="text" placeholder="User name" />
       <input class="password" type="text" placeholder="Password" />
     </div>
 
     <div></div>
+    <script src="script.js"></script>
   </body>
 </html>

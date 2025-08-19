@@ -58,10 +58,13 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Flexbox centers the modal content perfectly */
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*When modal is visible, change display from none to flex */
+.modal.show {
+  display: flex;
 }
 
 .modal-content {
@@ -107,9 +110,4 @@ h3 {
   color: #27ae60;
   font-weight: bold;
   margin: 20px 0;
-}
-
-/*When modal is visible, change display from none to flex */
-.modal.show {
-  display: flex;
 }
