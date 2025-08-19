@@ -11,7 +11,7 @@ h3 {
 }
 
 .bank-balance {
-  text-align: center;
+  text-align: start;
   margin: 20px 0;
 }
 
@@ -110,4 +110,128 @@ h3 {
   color: #27ae60;
   font-weight: bold;
   margin: 20px 0;
+}
+
+/* ATM Section Styling */
+.atmSection {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* ATM Display Screen */
+.atmSection input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 3px solid #1abc9c;
+  border-radius: 8px;
+  background-color: #1e3a32;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  font-size: 24px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Number Keypad Grid */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Number Buttons */
+.atmSection button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ecf0f1, #bdc3c7);
+  box-shadow: 5px 5px 10px #95a5a6, -5px -5px 10px #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.atmSection button:hover {
+  background: linear-gradient(145deg, #bdc3c7, #95a5a6);
+  transform: translateY(-2px);
+}
+
+.atmSection button:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 5px #95a5a6;
+}
+
+/* Action Buttons (Withdraw, Deposit, Clear) */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 20px !important;
+  width: auto !important;
+  height: auto !important;
+  background: linear-gradient(145deg, #3498db, #2980b9) !important;
+  color: white !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+}
+
+.action-btn:hover {
+  background: linear-gradient(145deg, #2980b9, #1f618d) !important;
+}
+
+/* Header Navigation */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  padding: 0 20px;
+}
+
+.header-nav button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logoutBtn {
+  display: none;
+}
+
+.logoutBtn.show {
+  background-color: #e74c3c;
+  color: white;
+  display: inline-block;
+}
+
+.logoutBtn:hover {
+  background-color: #c0392b;
+}
+
+#showBalanceBtn {
+  background-color: #27ae60;
+  color: white;
+}
+
+#showBalanceBtn:hover {
+  background-color: #219a52;
 }
