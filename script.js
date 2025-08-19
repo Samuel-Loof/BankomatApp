@@ -164,6 +164,30 @@ document.addEventListener("DOMContentLoaded", () => {
     zeroBtn.addEventListener("click", () => (inputField.value += "0"));
     keypad.appendChild(zeroBtn);
 
+    // Add decimal button
+    const decimalBtn = document.createElement("button");
+    decimalBtn.textContent = ".";
+    decimalBtn.addEventListener("click", () => {
+      if (!inputField.value.includes(".")) {
+        inputField.value += ".";
+      } else {
+        alert("You can only use one decimal point");
+      }
+    });
+    keypad.appendChild(decimalBtn);
+
+    // Add negative button to keypad (used only for assignment, no functional effect on ATM logic)
+    const negativeBtn = document.createElement("button");
+    negativeBtn.textContent = "-";
+    negativeBtn.addEventListener("click", () => {
+      if (!inputField.value.includes("-")) {
+        inputField.value = "-" + inputField.value; // prepend minus
+      } else {
+        alert("You can only use one minus sign");
+      }
+    });
+    keypad.appendChild(negativeBtn);
+
     // Add keypad to ATM section
     atmSection.appendChild(keypad);
 

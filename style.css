@@ -144,6 +144,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 20px 0;
+  margin-left: 50px;
 }
 
 /* Number Buttons */
