@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let inputField = null;
   let balanceModal = null;
 
+  let welcomeMessage = document.createElement("h3");
+  welcomeMessage.classList.add("welcomeHeading");
+  welcomeMessage.textContent = "Welcome to your bank";
+  document.body.prepend(welcomeMessage);
+
   // User data
   const users = [
     { username: "BradPitt", name: "Brad Pitt", password: "123", balance: 1000 },
@@ -30,7 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (user) {
+      currentUser = user;
+
       logoutBtn.classList.add("show");
+
+      // Update welcome message
+      welcomeMessage.textContent = `Welcome to your bank, ${user.name}`;
+
+      // Append welcome message if not already in DOM
+      if (!document.body.contains(welcomeMessage)) {
+        document.body.prepend(welcomeMessage); // adds at top of body
+      }
+
       return user;
     }
   }
@@ -93,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createModal();
 
     const info = document.getElementById("balanceInfo");
-    info.textContent = `Welcome ${currentUser.name}, your balance is ${currentUser.balance}kr`;
+    info.textContent = `Your balance is ${currentUser.balance}kr`;
 
     balanceModal.classList.add("show");
   }
