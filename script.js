@@ -123,6 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     loginSection.style.display = "block";
     logoutBtn.classList.remove("show"); // Remove the logout button if the user logs out
+
+    welcomeMessage.textContent = "Welcome to your bank"; // Update the welcome message without the users name
+
     // Clear input fields
     document.querySelector(".username").value = "";
     document.querySelector(".password").value = "";

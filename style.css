@@ -49,6 +49,10 @@ body {
   box-sizing: border-box;
 }
 
+.loginBtn {
+  padding: 9px;
+}
+
 /* Modal for the balance popup */
 .modal {
   display: none; /* Hidden by default */
